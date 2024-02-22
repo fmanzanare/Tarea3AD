@@ -1,0 +1,9 @@
+<h1>Facturacion</h1>
+<h2>Guardar facturas</h2>
+<form (submit)="saveInvoice()">
+    <input type="text" name="amount" [(ngModel)]="amount">
+    <select name="selectedClient" *ngFor="let client of clients" [(ngModel)]="selectedClient">
+        <option [value]="client.id">{{ client.name }}</option>
+    </select>
+    <button type="submit">Guardar</button>
+</form>
