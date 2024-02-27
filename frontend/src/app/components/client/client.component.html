@@ -1,0 +1,16 @@
+
+<h1>Clientes</h1>
+<h2>Buscador</h2>
+<form (keyup)="getByNombre()">
+    <input type="text" name="clientName" [(ngModel)]="clientName">
+</form>
+
+<ul *ngFor="let client of clients">
+    <li>{{ client.name }}</li>
+    <li>{{ client.lastnameOne }}</li>
+    <li>{{ client.lastnameTwo }}</li>
+    <li>{{ client.email }}</li>
+    <span *ngFor="let factura of client.invoices">
+        <li>{{ factura.amount }}</li>
+    </span>
+</ul>
