@@ -8,7 +8,7 @@ import { Client } from '../models/Client';
 })
 export class ClientService {
 
-  BASE_URL: string = "http://192.168.192.114:9000/api/client"
+  BASE_URL: string = "http://localhost:9000/api/client"
 
   constructor(private http: HttpClient) { }
 

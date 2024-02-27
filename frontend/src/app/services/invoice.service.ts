@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class InvoiceService {
 
-  BASE_URL: string = "http://192.168.192.114:9000/api/invoice"
+  BASE_URL: string = "http://localhost:9000/api/invoice"
   httpHeaders: HttpHeaders = new HttpHeaders({'content-type': 'application/json'})
 
   constructor(private http: HttpClient) { }

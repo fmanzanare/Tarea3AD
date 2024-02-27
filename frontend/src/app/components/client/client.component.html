@@ -10,7 +10,7 @@
     <li>{{ client.lastnameOne }}</li>
     <li>{{ client.lastnameTwo }}</li>
     <li>{{ client.email }}</li>
-    <span *ngFor="let factura of client.invoices">
-        <li>{{ factura.amount }}</li>
+    <span *ngFor="let amount of client.invoices">
+        <li>{{ amount }}</li>
     </span>
 </ul>

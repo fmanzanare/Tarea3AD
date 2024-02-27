@@ -1,5 +1,6 @@
 package com.estech.backend.controller;
 
+import com.estech.backend.dto.ClientDTO;
 import com.estech.backend.model.Client;
 import com.estech.backend.service.ClientService;
 import jakarta.validation.Valid;
@@ -20,7 +21,7 @@ public class ClientController {
 
     @GetMapping("/{name}")
     public ResponseEntity<?> getClientByName(@PathVariable String name) {
-        List<Client> list = clientService.getClientByName(name);
+        List<ClientDTO> list = clientService.getClientByName(name);
 
         if (list.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -36,7 +37,7 @@ public class ClientController {
 
     @GetMapping
     public ResponseEntity<?> getAllClients() {
-        List<Client> list = clientService.getAllClients();
+        List<ClientDTO> list = clientService.getAllClients();
 
         if (list.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);

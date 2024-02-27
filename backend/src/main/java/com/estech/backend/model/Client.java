@@ -1,5 +1,6 @@
 package com.estech.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -31,7 +32,7 @@ public class Client {
     private String lastnameOne;
     @NotBlank
     private String lastnameTwo;
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "id")
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "client")
     private List<Invoice> invoices;
 
 }

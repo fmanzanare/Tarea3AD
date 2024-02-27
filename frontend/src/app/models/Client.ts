@@ -6,5 +6,5 @@ export class Client {
     lastnameOne: string = ''
     lastnameTwo: string = ''
     email: string = ''
-    invoices: Invoice[] = []
+    invoices: number[] = []
 }
