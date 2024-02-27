@@ -26,7 +26,7 @@ export class InvoiceComponent {
 
   saveInvoice(): void {
     this.invoiceToSave.amount = Number(this.amount)
-    this.invoiceToSave.client = this.selectedClient
+    this.invoiceToSave.client.id = this.selectedClient
     console.log(this.invoiceToSave)
     this.service.saveInvoice(this.invoiceToSave).subscribe({
       next: res => console.log(res),

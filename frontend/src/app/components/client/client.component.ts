@@ -16,7 +16,10 @@ export class ClientComponent {
 
   getByNombre(): void {
     this.service.getByName(this.clientName).subscribe({
-      next: res => this.clients = res,
+      next: res => {
+        console.log(res)
+        this.clients = res
+      },
       error: err => console.error(err)
     })
   }
