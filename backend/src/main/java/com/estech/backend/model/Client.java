@@ -31,7 +31,6 @@ public class Client {
     private String lastnameOne;
     @NotBlank
     private String lastnameTwo;
-    @JsonManagedReference
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "id")
     private List<Invoice> invoices;
 

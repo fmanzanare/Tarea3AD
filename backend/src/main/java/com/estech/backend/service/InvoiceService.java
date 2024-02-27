@@ -12,6 +12,7 @@ public class InvoiceService {
     private InvoiceRepository invoiceRepository;
 
     public Invoice saveInvoice(Invoice invoice) {
+
         return invoiceRepository.save(invoice);
     }
 
